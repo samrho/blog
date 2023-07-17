@@ -1,14 +1,14 @@
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
+  title: 'Tech blog',
   author: 'Sam Rho',
   headerTitle: 'Tech Blog',
-  description: 'Pretty much everything that I learn and do',
+  description: 'Pretty much everything that I think, learn and do',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://samrho.vercel.app',
   siteRepo: 'https://github.com/samrho/blog',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/profile.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'seungnam2@gmail.com',
   github: 'https://github.com/samrho',
@@ -29,7 +29,8 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit, klaviyo, revue
     // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
+    provider: '',
+    // provider: 'buttondown',
   },
   comment: {
     // If you want to use an analytics provider you have to add it to the

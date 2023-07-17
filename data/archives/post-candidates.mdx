@@ -1,0 +1,83 @@
+---
+title: Questions on Blockchain
+date: '2022-10-23'
+tags: ['blockchain']
+draft: false
+summary: various questions on top of my head regarding blockchain
+---
+
+## 1. on Solidity
+
+>
+
+- When to use Require & Assert (and Revert)
+- Differences between constant& immutable
+- Global variables(`msg`, `block.timestamp`, `blockhash`)
+- what is `payable` and what does it do? how does it work under the hood?
+
+## 2. How does EVM works behind the scene?
+
+[https://www.evm.codes/](https://www.evm.codes/)
+
+> answer
+
+x
+
+## 3. Docker
+
+- docker commands
+
+```shell
+docker ps -a
+docker create -it <container_name> <image_name>
+docker ps -a
+docker attach <container_name>
+
+# conatiner attach 후 linux
+apt update -y && apt install -y software-properties-common
+
+```
+
+- Public address of the key: 0xA0855819dAEfB906e2fdD43cBaF5f8dB75e25611
+- Path of the secret key file: test_data/keystore/UTC--2022-10-23T09-20-33.364570545Z--a0855819daefb906e2fdd43cbaf5f8db75e25611
+
+## Glossary
+
+- etherBase -> node that receives when new block is discovered
+
+```js
+//  The result of eth.getBlock(0).
+const result = {
+  difficulty: 20,
+  extraData: '0x',
+  gasLimit: 2100000,
+  gasUsed: 0,
+  hash: '0xb43253878addeeaefade9b06dbafec7e6f7528fc0fee39c57f30d4a162ba1dc2',
+  logsBloom:
+    '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  miner: '0x0000000000000000000000000000000000000000',
+  mixHash: '0x0000000000000000000000000000000000000000000000000000000000000000',
+  nonce: '0x0000000000000000',
+  number: 0,
+  parentHash: '0x0000000000000000000000000000000000000000000000000000000000000000',
+  receiptsRoot: '0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421',
+  sha3Uncles: '0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347',
+  size: 504,
+  stateRoot: '0x27963f42045ea7acc9aa7ec529045f54285f9af3e5847f2454cfb94a43ebb4df',
+  timestamp: 0,
+  totalDifficulty: 20,
+  transactions: [],
+  transactionsRoot: '0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421',
+  uncles: [],
+}
+
+// The result
+```
+
+## 4. message decode
+
+```javascript
+web3.toAscii(eth.getTransaction('<transaction No.>').input) // -> data
+eth.getTransactionFromBlock('<blocknumber>')
+eth.getTransaction('<txId>')
+```
